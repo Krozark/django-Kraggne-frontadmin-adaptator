@@ -1,0 +1,12 @@
+{% load frontadmin_tags %}
+{% frontadmin request object %}
+<div class="gblocks post">
+    <h2 class="gblocks-title">{{ object.title }}</h2>
+    <div class="entry">
+        <a class="gblocks-link" href="{{ object.link}}">
+            <img class="gblocks-image" src="{{ MEDIA_URL }}{{ object.image }}" alt=""/>
+        <a>
+        <span class="gblocks-link">{{ object.link|urlize }}</span>
+    </div>
+</div>
+{% endfrontadmin %}

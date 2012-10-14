@@ -1,0 +1,15 @@
+{% load frontadmin_tags markup gblocks %}
+
+{% frontadmin request object %}
+<div class="gblocks post">
+    <h2 class="gblocks-title">{{ object.title }}</h2>
+    <div class="entry">
+        <div class="gblocks-text">{{ object.text|textile }}</div>
+        <a href="{{ MEDIA_URL }}{{ object.file }}" class="gblocks-file">
+            <div class="icon {{object.file|get_file_extension}}">
+                <span>{{object.file|get_file_name}}</span>
+            </div>
+        </a>
+    </div>
+</div>
+{% endfrontadmin %}

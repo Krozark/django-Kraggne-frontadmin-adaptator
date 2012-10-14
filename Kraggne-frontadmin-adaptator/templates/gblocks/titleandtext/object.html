@@ -1,0 +1,11 @@
+{% load frontadmin_tags markup %}
+{% frontadmin request object %}
+<div class="gblocks post">
+    <h2 class="gblocks-title">{{ object.title }}</h2>
+    <div class="entry">
+        <div class="gblocks-text">
+            {{ object.text|textile }}
+        </div>
+    </div>
+</div>
+{% endfrontadmin %}
