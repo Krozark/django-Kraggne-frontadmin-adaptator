@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% load i18n frontadmin_tags contentblocks flatblocks %}
+
+{% block page.body %}
+
+{% containeur page.slug css_class="top" %}
+
+{% include "Kraggne/pagination.inc.html" %}
+
+{% frontadmin request object_model_name %}
+{% for object in object_list %}
+{% display object %}
+{% endfor %}
+{% endfrontadmin %}
+
+{% include "Kraggne/pagination.inc.html" %}
+
+{% endblock %}
